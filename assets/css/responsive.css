@@ -1,0 +1,64 @@
+/* Tablet */
+@media (max-width: 768px) {
+    .couple-info {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .dates {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dates-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .wedding-timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-underscore {
+        width: 150px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wedding-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-item.large {
+        grid-row: auto;
+    }
+
+    .hero-underscore {
+        width: 120px;
+    }
+} 

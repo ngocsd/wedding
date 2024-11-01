@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'marielle';
+    src: url('../fonts/marielle.otf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Theonory';
+    src: url('../fonts/TheonoryFreeVersionRegular-gxg03.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* Base styles */
+:root {
+    --primary-color: #3C3C3C;
+    --secondary-color: #8B8B8B;
+    --accent-color: #7B6F52;
+    --background-color: #FFFFFF;
+    --text-light: #666666;
+    --spacing-unit: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Theonory', serif;
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* Components */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                      url('../images/hero/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+    font-family: 'Theonory';
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    letter-spacing: 6px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+    font-family: 'marielle', cursive;
+    font-size: 4rem;
+    opacity: 0.9;
+}
+
+.couple-info {
+    padding: var(--spacing-unit);
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    margin: 6rem 0;
+}
+
+.couple {
+    text-align: center;
+    max-width: 350px;
+}
+
+.image-wrapper {
+    margin-bottom: 2rem;
+}
+
+.couple img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.couple h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.couple-desc {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.social-icons a {
+    color: var(--accent-color);
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+/* Save the Date Section */
+.save-the-date {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #FAF9F8;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.celebrate-text {
+    font-family: 'Theonory', cursive;
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.wedding-text {
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.dates-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 3rem 0;
+}
+
+.date-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.date-card h3 {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.date-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.date-address {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.rsvp-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 2rem 0;
+}
+
+.rsvp-button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+.wedding-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.timeline-item {
+    text-align: center;
+}
+
+.timeline-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.time {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.event {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 4rem 0;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-item.large {
+    grid-row: span 2;
+}
+
+.photo-item img:hover {
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #FAF9F8;
+}
+
+.footer-text {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.signature {
+    font-family: 'Theonory', cursive;
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.hero-underscore {
+    width: 200px;
+    height: auto;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
