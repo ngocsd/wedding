@@ -40,7 +40,20 @@
     }
 
     .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .grid-column {
+        height: auto;
+    }
+
+    /* Reset flex values cho các cột */
+    .grid-column:first-child,
+    .grid-column:last-child,
+    .grid-column:nth-child(2) {
+        flex: 1;
     }
 
     .hero .subtitle {
@@ -91,6 +104,18 @@
     .btn-outline,
     .btn-primary {
         width: 100%;
+    }
+
+    .gallery {
+        padding: 40px 10px;
+    }
+
+    .photo-grid {
+        gap: 10px;
+    }
+
+    .photo-item:hover img {
+        transform: none; /* Tắt hiệu ứng hover trên mobile */
     }
 }
 
