@@ -125,12 +125,12 @@
 .save-the-date {
     text-align: center;
     padding: 4rem 2rem;
-    background-color: #FAF9F8;
+    background-color: #F8F7F3;
     max-width: 1440px;
     margin: 0 auto;
 }
 .save-the-date p {
-    color: var(--text-light);
+    color: #7E6D4B;
 }
 
 .section-title {
@@ -347,25 +347,29 @@
 footer {
     text-align: center;
     padding: 4rem 0;
-    background-color: #FAF9F8;
+    background-color: #F8F7F3;
 }
 
 .footer-text {
-    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #7E6D4B;
     margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 .signature {
-    font-family: 'Theonory', cursive;
-    font-size: 2rem;
-    color: var(--accent-color);
+    font-family: 'marielle', cursive;
+    font-size: 1.25rem;
+    color: #7E6D4B;
 }
 
-.hero-underscore {
+footer .hero-underscore {
     width: 200px;
-    height: 17px;
-    margin-top: 1rem;
+    height: 12px;
     opacity: 0.8;
+    filter: invert(50%) sepia(8%) saturate(1122%) hue-rotate(7deg) brightness(60%) contrast(87%);
 }
 
 .dates-container {
