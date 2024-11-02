@@ -66,19 +66,47 @@ body {
 
 .couple-info {
     padding: var(--spacing-unit);
+    max-width: 1440px;
+    margin: 6rem auto;
     display: flex;
     justify-content: center;
-    gap: 8rem;
-    margin: 6rem 0;
+    gap: 2rem;
 }
 
 .couple {
-    text-align: center;
-    max-width: 350px;
+    flex: 0 1 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
 }
 
+.couple-detail,
 .image-wrapper {
-    margin-bottom: 2rem;
+    width: 350px;
+    max-width: 50%;
+}
+
+.couple-detail-right {
+    text-align: right;
+}
+
+.couple-detail-left {
+    text-align: left;
+}
+
+.couple-detail-right .social-icons {
+    justify-content: flex-end;
+}
+
+.couple-detail-left .social-icons {
+    justify-content: flex-start;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .couple img {
@@ -89,23 +117,35 @@ body {
 }
 
 .couple h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
     font-weight: 400;
 }
 
 .couple-desc {
     color: var(--text-light);
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
 }
 
 .social-icons a {
-    color: var(--accent-color);
-    margin: 0 0.5rem;
-    font-size: 1.2rem;
+    display: inline-block;
     transition: opacity 0.3s ease;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
 }
 
 .social-icons a:hover {
@@ -115,54 +155,69 @@ body {
 /* Save the Date Section */
 .save-the-date {
     text-align: center;
-    padding: 4rem 0;
+    padding: 4rem 2rem;
     background-color: #FAF9F8;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .section-title {
-    font-size: 2.5rem;
-    letter-spacing: 3px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.62em;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.celebrate-text {
+    font-family: 'marielle', cursive;
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.snow-divider {
+    margin: 2rem auto;
+    width: 24px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snow-divider img {
+    width: 100%;
+    height: 100%;
+}
+
+.wedding-text {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    line-height: 2;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.date-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.date-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    color: var(--accent-color);
     margin-bottom: 1rem;
     font-weight: 400;
 }
 
-.celebrate-text {
-    font-family: 'Theonory', cursive;
-    font-size: 2rem;
-    color: var(--accent-color);
-    margin-bottom: 2rem;
-}
-
-.wedding-text {
-    color: var(--text-light);
-    margin-bottom: 3rem;
-    line-height: 1.8;
-}
-
-.dates-container {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin: 3rem 0;
-}
-
-.date-card {
-    text-align: center;
-    padding: 2rem;
-}
-
-.date-card h3 {
-    font-size: 3rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-.date-title {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
 .date-address {
+    font-family: 'Inter', sans-serif;
     color: var(--text-light);
     font-size: 0.9rem;
     line-height: 1.6;
@@ -271,4 +326,97 @@ footer {
     height: auto;
     margin-top: 1rem;
     opacity: 0.8;
+}
+
+.dates-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 4rem auto;
+    max-width: 1200px;
+}
+
+.date-card {
+    flex: 1;
+}
+
+.date-card-right {
+    text-align: right;
+}
+
+.date-card-left {
+    text-align: left;
+}
+
+.date-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.date-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 72px;
+    color: #517237;
+    margin: 1rem 0;
+    font-weight: 400;
+}
+
+.date-address {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.date-divider {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.btn-outline,
+.btn-solid {
+    padding: 1rem 3rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.btn-outline {
+    background-color: #FFFFFF;
+    color: #584828;
+}
+
+.btn-solid {
+    background-color: #517237;
+    color: white;
+}
+
+.btn-outline:hover,
+.btn-solid:hover {
+    transform: scale(1.05);
+}
+
+.date-number {
+    margin: 1rem 0;
+}
+
+.date-number img {
+    height: 3rem; /* Hoặc kích thước phù hợp với thiết kế */
+    width: auto;
 }
