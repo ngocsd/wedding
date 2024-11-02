@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 }
 
 .hero-content {
@@ -588,4 +589,23 @@ footer .hero-underscore {
     font-weight: 400;
     color: #584828;
     margin-bottom: 40px;
+}
+
+.hero-icon {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.nnh-icon {
+    width: 64px;
+    height: 72px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.nnh-icon:hover {
+    transform: scale(1.2);
 }

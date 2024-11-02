@@ -63,6 +63,15 @@
     .hero-underscore {
         width: 150px;
     }
+
+    .hero-icon {
+        top: 15px;
+    }
+
+    .nnh-icon {
+        width: 48px;
+        height: 54px;
+    }
 }
 
 /* Mobile */
@@ -116,6 +125,15 @@
 
     .photo-item:hover img {
         transform: none; /* Tắt hiệu ứng hover trên mobile */
+    }
+
+    .hero-icon {
+        top: 10px;
+    }
+
+    .nnh-icon {
+        width: 42px;
+        height: 48px;
     }
 }
 
