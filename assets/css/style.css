@@ -297,31 +297,50 @@
 
 /* Gallery Section */
 .gallery {
-    padding: 4rem 0;
+    padding: 80px 20px;
 }
 
 .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 2rem;
-    max-width: 1400px;
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
+    height: 1280px;
+}
+
+.grid-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* Cột bên trái và phải */
+.grid-column:first-child,
+.grid-column:last-child {
+    flex: 0.9;
+    height: 100%;
+}
+
+/* Cột giữa */
+.grid-column:nth-child(2) {
+    flex: 1.2;
+    height: 100%;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
 }
 
 .photo-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.photo-item.large {
-    grid-row: span 2;
-}
-
-.photo-item img:hover {
-    transform: scale(1.02);
+.photo-item:hover img {
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -556,4 +575,13 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
+}
+
+.gallery .section-title {
+    text-align: center;
+    font-family: 'Theonory';
+    font-size: 36px;
+    font-weight: 400;
+    color: #584828;
+    margin-bottom: 40px;
 }

@@ -132,3 +132,30 @@
         font-size: 60px;
     }
 }
+
+/* Tablet */
+@media (max-width: 1023px) {
+    .photo-grid {
+        gap: 15px;
+    }
+    
+    .grid-column {
+        gap: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .photo-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .grid-column {
+        gap: 10px;
+    }
+    
+    .gallery {
+        padding: 40px 15px;
+    }
+}
