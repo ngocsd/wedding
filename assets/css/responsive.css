@@ -1,5 +1,5 @@
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .couple-info {
         flex-direction: column;
     }
@@ -8,74 +8,37 @@
         max-width: 100%;
     }
 
-    .dates {
-        flex-direction: column;
-        gap: 2rem;
+    .couple-detail {
+        padding: 1rem;
     }
 
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .dates-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .timeline-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .timeline-item::after {
-        width: 50%;
-        left: 75%;
-    }
-
-    .timeline-item:nth-child(2n)::after {
-        display: none;
+    .couple-desc {
+        font-size: 0.9rem;
     }
 
     .photo-grid {
-        height: auto;
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        gap: 15px;
+        height: 900px
     }
-
+    
     .grid-column {
-        height: auto;
+        flex: 1;
+        gap: 15px;
     }
 
-    /* Reset flex values cho các cột */
     .grid-column:first-child,
-    .grid-column:last-child,
+    .grid-column:last-child {
+        flex: 0.8;
+    }
+
     .grid-column:nth-child(2) {
         flex: 1;
-    }
-
-    .hero .subtitle {
-        font-size: 1.5rem;
-    }
-
-    .hero-underscore {
-        width: 150px;
-    }
-
-    .hero-icon {
-        top: 15px;
-    }
-
-    .nnh-icon {
-        width: 48px;
-        height: 54px;
     }
 }
 
 /* Mobile */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .info-grid {
         grid-template-columns: 1fr;
     }
