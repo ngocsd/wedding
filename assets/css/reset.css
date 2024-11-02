@@ -13,6 +13,9 @@
     --background-color: #FFFFFF;
     --text-light: #5B4029;
     --spacing-unit: 2rem;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Theonory', serif;
+    --font-decorative: 'marielle', cursive;
 }
 
 body {

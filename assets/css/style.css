@@ -26,7 +26,7 @@
 
 .hero .subtitle {
     font-family: 'marielle', cursive;
-    font-size: 4rem;
+    font-size: 36px;
     opacity: 0.9;
 }
 
@@ -261,10 +261,6 @@
     z-index: -1;
 }
 
-.timeline-item:last-child::after {
-    display: none;
-}
-
 .timeline-item img {
     width: 40px;
     height: 40px;
@@ -442,6 +438,122 @@ footer {
 }
 
 .date-number img {
-    height: 3rem; /* Hoặc kích thước phù hợp với thiết kế */
+    height: 3rem;
     width: auto;
+}
+
+.timeline {
+    position: relative;
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', serif;
+    color: var(--text-light);
+}
+
+.watermark {
+    width: 100%;
+    text-align: center;
+    font-family: 'Theonory', serif;
+    font-size: 120px;
+    color: #545454;
+    letter-spacing: 0.05rem;
+    opacity: 0.1;
+    padding: 20px 0;
+    margin: 40px 0;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Đường kẻ ngang */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 14rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #5B4029;
+}
+
+.timeline-item {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    padding: 0 15px;
+}
+
+/* Chấm tròn */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 14rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background-color: #5B4029;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #5B4029;
+    font-weight: 600;
+}
+
+.timeline-icon {
+    position: relative;
+    margin-bottom: 60px;
+    z-index: 1;
+}
+
+.timeline-icon img {
+    width: 8rem;
+    height: 8rem;
+    fill: #5B4029;
+    border: none;
+    outline: none;
+}
+
+.timeline-event {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.timeline-location {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-light);
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.watermark-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 40px;
+}
+
+.watermark {
+    width: 100%;
+    text-align: center;
+    font-family: 'Theonory', serif;
+    font-size: 120px;
+    color: #545454;
+    letter-spacing: 0.05rem;
+    opacity: 0.1;
+    padding: 20px 0;
+    white-space: nowrap;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
 }

@@ -26,8 +26,17 @@
         gap: 2rem;
     }
 
-    .wedding-timeline {
+    .timeline-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline-item::after {
+        width: 50%;
+        left: 75%;
+    }
+
+    .timeline-item:nth-child(2n)::after {
+        display: none;
     }
 
     .photo-grid {
@@ -49,8 +58,12 @@
         grid-template-columns: 1fr;
     }
 
-    .wedding-timeline {
+    .timeline-container {
         grid-template-columns: 1fr;
+    }
+
+    .timeline-item::after {
+        display: none;
     }
 
     .photo-grid {
@@ -64,4 +77,58 @@
     .hero-underscore {
         width: 120px;
     }
-} 
+
+    .date-card-right,
+    .date-card-left {
+        text-align: center;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-outline,
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+    .timeline::after {
+        font-size: 60px;
+    }
+
+    .timeline-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .timeline-container::before {
+        display: none;
+    }
+
+    .timeline-item {
+        padding: 20px 0;
+    }
+
+    .timeline-item::after {
+        display: none;
+    }
+
+    .timeline-icon {
+        margin-bottom: 20px;
+    }
+
+    .timeline-event {
+        margin-top: 20px;
+    }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+    .watermark {
+        font-size: 60px;
+    }
+}
