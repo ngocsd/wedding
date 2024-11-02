@@ -2,7 +2,10 @@
 @media (max-width: 768px) {
     .couple-info {
         flex-direction: column;
-        gap: 2rem;
+    }
+    
+    .couple {
+        max-width: 100%;
     }
 
     .dates {
