@@ -107,22 +107,22 @@
 
     .qr-item {
         width: 100%;
-        max-width: 200px;
+        max-width: 180px;
         margin: 0 auto;
     }
 
     .qr-item img:last-child {
-        width: 100%;
+        width: 140px;
         height: auto;
     }
 
     .qr-item p {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
 
     .zalo-link img {
-        width: 20px;
-        height: 20px;
+        width: 32px;
+        height: 32px;
     }
 
     .map-container {
@@ -229,6 +229,19 @@
 
     .qr-item {
         max-width: 160px;
+    }
+
+    .qr-item img:last-child {
+        width: 120px;
+    }
+
+    .qr-item p {
+        font-size: 1rem;
+    }
+
+    .zalo-link img {
+        width: 28px;
+        height: 28px;
     }
 }
 
