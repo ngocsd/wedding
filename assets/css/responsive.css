@@ -107,22 +107,22 @@
 
     .qr-item {
         width: 100%;
-        max-width: 180px;
+        max-width: 140px;
         margin: 0 auto;
     }
 
     .qr-item img:last-child {
-        width: 140px;
+        width: 120px;
         height: auto;
     }
 
     .qr-item p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .zalo-link img {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
     }
 
     .map-container {
@@ -214,10 +214,17 @@
         padding: 40px 15px;
     }
 
+    .photo-item {
+        height: auto;
+        max-height: 300px;
+        overflow: hidden;
+    }
+
     .photo-item img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
+        max-height: 300px;
     }
 }
 
@@ -228,20 +235,32 @@
     }
 
     .qr-item {
-        max-width: 160px;
+        max-width: 120px;
     }
 
     .qr-item img:last-child {
-        width: 120px;
+        width: 100px;
+    }
+
+    .qr-item img {
+        width: 200px;
     }
 
     .qr-item p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .zalo-link img {
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .photo-item {
+        max-height: 250px;
+    }
+
+    .photo-item img {
+        max-height: 250px;
     }
 }
 
@@ -328,5 +347,33 @@
     .btn-solid {
         font-size: 0.9rem;
         padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .qr-item img {
+        width: 400px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+    .qr-item img {
+        width: 360px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .qr-item img {
+        width: 320px;
+    }
+}
+
+/* Mobile nhỏ */
+@media (max-width: 375px) {
+    .qr-item img {
+        width: 280px;
     }
 }

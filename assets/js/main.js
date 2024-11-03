@@ -45,3 +45,29 @@ ngocQR?.querySelector('.qr-name')?.addEventListener('click', () => toggleQR(ngoc
 
 hienQR?.querySelector('.qr-code')?.addEventListener('click', () => toggleQR(hienQR, ngocQR));
 hienQR?.querySelector('.qr-name')?.addEventListener('click', () => toggleQR(hienQR, ngocQR));
+
+// Thêm function để xử lý progressive loading cho hero background
+function loadHeroBackground() {
+    const images = [
+        { url: 'assets/images/hero/hero-bg-low.jpg', quality: 1 },
+        { url: 'assets/images/hero/hero-bg.jpg', quality: 2 },
+        { url: 'assets/images/hero/hero-bg.png', quality: 3 }
+    ];
+    
+    const hero = document.querySelector('.hero');
+    let currentQuality = 0;
+
+    images.forEach(img => {
+        const image = new Image();
+        image.src = img.url;
+        image.onload = () => {
+            if (img.quality > currentQuality) {
+                hero.style.backgroundImage = `url(${img.url})`;
+                currentQuality = img.quality;
+            }
+        };
+    });
+}
+
+// Gọi function khi document load
+document.addEventListener('DOMContentLoaded', loadHeroBackground);
