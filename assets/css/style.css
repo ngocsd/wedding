@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 }
 
 .hero-content {
@@ -125,12 +126,12 @@
 .save-the-date {
     text-align: center;
     padding: 4rem 2rem;
-    background-color: #FAF9F8;
+    background-color: #F8F7F3;
     max-width: 1440px;
     margin: 0 auto;
 }
 .save-the-date p {
-    color: var(--text-light);
+    color: #7E6D4B;
 }
 
 .section-title {
@@ -297,56 +298,79 @@
 
 /* Gallery Section */
 .gallery {
-    padding: 4rem 0;
+    padding: 80px 20px;
 }
 
 .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 2rem;
-    max-width: 1400px;
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
+    height: 1280px;
+}
+
+.grid-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* Cột bên trái và phải */
+.grid-column:first-child,
+.grid-column:last-child {
+    flex: 0.9;
+    height: 100%;
+}
+
+/* Cột giữa */
+.grid-column:nth-child(2) {
+    flex: 1.2;
+    height: 100%;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
 }
 
 .photo-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.photo-item.large {
-    grid-row: span 2;
-}
-
-.photo-item img:hover {
-    transform: scale(1.02);
+.photo-item:hover img {
+    transform: scale(1.05);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 4rem 0;
-    background-color: #FAF9F8;
+    background-color: #F8F7F3;
 }
 
 .footer-text {
-    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #7E6D4B;
     margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 .signature {
-    font-family: 'Theonory', cursive;
-    font-size: 2rem;
-    color: var(--accent-color);
+    font-family: 'marielle', cursive;
+    font-size: 1.25rem;
+    color: #7E6D4B;
 }
 
-.hero-underscore {
+footer .hero-underscore {
     width: 200px;
-    height: 17px;
-    margin-top: 1rem;
+    height: 12px;
     opacity: 0.8;
+    filter: invert(50%) sepia(8%) saturate(1122%) hue-rotate(7deg) brightness(60%) contrast(87%);
 }
 
 .dates-container {
@@ -556,4 +580,125 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
+}
+
+.gallery .section-title {
+    text-align: center;
+    font-family: 'Theonory';
+    font-size: 36px;
+    font-weight: 400;
+    color: #584828;
+    margin-bottom: 40px;
+}
+
+.hero-icon {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.nnh-icon {
+    width: 64px;
+    height: 72px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.nnh-icon:hover {
+    transform: scale(1.2);
+}
+
+.qr-section {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.qr-section.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.qr-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qr-item p {
+    font-family: var(--font-primary);
+    color: var(--text-light);
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+.zalo-link {
+    display: inline-block;
+    order: 1;
+}
+
+.zalo-link img {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.3s ease;
+}
+
+.qr-item img:last-child {
+    order: 3;
+    width: 160px;
+    height: auto;
+}
+
+.map-section {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.map-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.map-item {
+    flex: 1;
+    max-width: 500px;
+}
+
+.map-item h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: var(--font-primary);
+    color: var(--text-light);
+}
+
+.map-item iframe {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-address {
+    margin-top: 1rem;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Thêm vào class hidden nếu chưa có */
+.hidden {
+    display: none;
 }

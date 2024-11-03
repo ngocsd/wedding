@@ -1,5 +1,5 @@
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .couple-info {
         flex-direction: column;
     }
@@ -8,52 +8,37 @@
         max-width: 100%;
     }
 
-    .dates {
-        flex-direction: column;
-        gap: 2rem;
+    .couple-detail {
+        padding: 1rem;
     }
 
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .dates-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .timeline-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .timeline-item::after {
-        width: 50%;
-        left: 75%;
-    }
-
-    .timeline-item:nth-child(2n)::after {
-        display: none;
+    .couple-desc {
+        font-size: 0.9rem;
     }
 
     .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
+        flex-direction: row;
+        gap: 15px;
+        height: 900px
+    }
+    
+    .grid-column {
+        flex: 1;
+        gap: 15px;
     }
 
-    .hero .subtitle {
-        font-size: 1.5rem;
+    .grid-column:first-child,
+    .grid-column:last-child {
+        flex: 0.8;
     }
 
-    .hero-underscore {
-        width: 150px;
+    .grid-column:nth-child(2) {
+        flex: 1;
     }
 }
 
 /* Mobile */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .info-grid {
         grid-template-columns: 1fr;
     }
@@ -91,6 +76,66 @@
     .btn-outline,
     .btn-primary {
         width: 100%;
+    }
+
+    .gallery {
+        padding: 40px 10px;
+    }
+
+    .photo-grid {
+        gap: 10px;
+    }
+
+    .photo-item:hover img {
+        transform: none; /* Tắt hiệu ứng hover trên mobile */
+    }
+
+    .hero-icon {
+        top: 10px;
+    }
+
+    .nnh-icon {
+        width: 42px;
+        height: 48px;
+    }
+
+    /* Thêm styles cho QR section */
+    .qr-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .qr-item {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .qr-item img:last-child {
+        width: 100%;
+        height: auto;
+    }
+
+    .qr-item p {
+        font-size: 0.8rem;
+    }
+
+    .zalo-link img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .map-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .map-item {
+        max-width: 100%;
+    }
+
+    .map-item iframe {
+        height: 250px;
     }
 }
 
@@ -130,5 +175,43 @@
 @media (max-width: 768px) {
     .watermark {
         font-size: 60px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+    .photo-grid {
+        gap: 15px;
+    }
+    
+    .grid-column {
+        gap: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .photo-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .grid-column {
+        gap: 10px;
+    }
+    
+    .gallery {
+        padding: 40px 15px;
+    }
+}
+
+/* Mobile nhỏ */
+@media (max-width: 375px) {
+    .qr-section {
+        padding: 1rem;
+    }
+
+    .qr-item {
+        max-width: 160px;
     }
 }

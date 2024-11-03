@@ -1,22 +1,47 @@
-// Animation on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    // Animate elements when they come into view
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.animate-on-scroll');
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight;
-            
-            if(elementPosition < screenPosition) {
-                element.classList.add('animated');
-            }
-        });
-    }
+// Section Toggle Logic
+const mapButton = document.getElementById('mapButton');
+const qrButton = document.getElementById('qrButton');
+const mapSection = document.getElementById('mapSection');
+const qrSection = document.getElementById('qrSection');
+const ngocQR = document.getElementById('ngoc-qr');
+const hienQR = document.getElementById('hien-qr');
 
-    window.addEventListener('scroll', animateOnScroll);
+function hideAllSections() {
+    mapSection.classList.add('hidden');
+    qrSection.classList.add('hidden');
+    // Reset trạng thái của các QR khi ẩn section
+    ngocQR?.classList.remove('hidden');
+    hienQR?.classList.remove('hidden');
+}
+
+mapButton?.addEventListener('click', function() {
+    if (!mapSection.classList.contains('hidden')) {
+        hideAllSections();
+    } else {
+        hideAllSections();
+        mapSection.classList.remove('hidden');
+    }
 });
 
-// RSVP form handling
-document.querySelector('.rsvp-button')?.addEventListener('click', function() {
-    // Add RSVP form logic here
-}); 
+qrButton?.addEventListener('click', function() {
+    if (!qrSection.classList.contains('hidden')) {
+        hideAllSections();
+    } else {
+        hideAllSections();
+        qrSection.classList.remove('hidden');
+    }
+});
+
+// QR Toggle Logic
+function toggleQR(clickedQR, otherQR) {
+    if (!otherQR.classList.contains('hidden')) {
+        otherQR.classList.add('hidden');
+    }
+}
+
+// Thêm event listeners cho cả QR và tên
+ngocQR?.querySelector('.qr-code')?.addEventListener('click', () => toggleQR(ngocQR, hienQR));
+ngocQR?.querySelector('.qr-name')?.addEventListener('click', () => toggleQR(ngocQR, hienQR));
+
+hienQR?.querySelector('.qr-code')?.addEventListener('click', () => toggleQR(hienQR, ngocQR));
+hienQR?.querySelector('.qr-name')?.addEventListener('click', () => toggleQR(hienQR, ngocQR));
