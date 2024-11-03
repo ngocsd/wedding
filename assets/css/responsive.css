@@ -98,6 +98,32 @@
         width: 42px;
         height: 48px;
     }
+
+    /* Thêm styles cho QR section */
+    .qr-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .qr-item {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .qr-item img:last-child {
+        width: 100%;
+        height: auto;
+    }
+
+    .qr-item p {
+        font-size: 0.8rem;
+    }
+
+    .zalo-link img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 /* Tablet & Mobile */
@@ -163,5 +189,16 @@
     
     .gallery {
         padding: 40px 15px;
+    }
+}
+
+/* Mobile nhỏ */
+@media (max-width: 375px) {
+    .qr-section {
+        padding: 1rem;
+    }
+
+    .qr-item {
+        max-width: 160px;
     }
 }

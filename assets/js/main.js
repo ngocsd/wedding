@@ -19,4 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
 // RSVP form handling
 document.querySelector('.rsvp-button')?.addEventListener('click', function() {
     // Add RSVP form logic here
+});
+
+// QR Section Toggle
+document.getElementById('qrButton')?.addEventListener('click', function() {
+    const qrSection = document.getElementById('qrSection');
+    qrSection.classList.toggle('hidden');
+    
+    // Scroll to QR section if it's visible
+    if (!qrSection.classList.contains('hidden')) {
+        qrSection.scrollIntoView({ behavior: 'smooth' });
+    }
 }); 

@@ -609,3 +609,53 @@ footer .hero-underscore {
 .nnh-icon:hover {
     transform: scale(1.2);
 }
+
+.qr-section {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.qr-section.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.qr-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qr-item p {
+    font-family: var(--font-primary);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    order: 2;
+}
+
+.zalo-link {
+    display: inline-block;
+    order: 1;
+}
+
+.zalo-link img {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.3s ease;
+}
+
+.qr-item img:last-child {
+    order: 3;
+    width: 160px;
+    height: auto;
+}
