@@ -124,6 +124,19 @@
         width: 20px;
         height: 20px;
     }
+
+    .map-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .map-item {
+        max-width: 100%;
+    }
+
+    .map-item iframe {
+        height: 250px;
+    }
 }
 
 /* Tablet & Mobile */
